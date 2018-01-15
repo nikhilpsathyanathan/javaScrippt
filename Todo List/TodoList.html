@@ -1,52 +1,15 @@
 <html>
-<script src="TodoList.js"></script>
-<style>
-                div.head {
-                    background-color: #f44336;
-                
-                    border: 25px solid rgb(255, 255, 255);
-                    padding: 25px;
-                    -webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;
-                    margin: 25px;
-                }
-
-                div.head1 {
-                    background-color: #f44336;
-                    -webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;
-                    border: 25px solid rgb(255, 255, 255);
-                    padding: 25px;
-                    margin: 25px;
-                }
-
-                button.one{
-                    background-color: #ffffff;
-                    -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;
-                    padding: 15px;
-        
-                }
-                input{
-                    background-color: #ffffff;
-                    -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;
-                    padding: 15px;
-                    margin: 25px;
-                }
-
-                li {
-                  border-style: solid;
-                 border-color: white;
-                 padding: 5px;
-                 background: rgb(249, 249, 249);
-                margin: 5px;
-                border-width: 5px;
-                align-content:wrap ;
-}
-</style>
+    <head>
+            <script src="TodoList.js"></script>
+            <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
 <body bgcolor="#FFFFFF" align="center">
-<div class="head1">
+<div class="main">
         <div align="center" style="margin: 50px" class="head">
                 <h1 align="center"  style="color:rgb(255, 255, 255); margin:5px;font-family:tahoma">To do list<h1>
-                <input placeholder="enter something" id="input_value" >
-                <button type="button" class="one" onclick="todoList()">Add Item</button>
+                <input placeholder="enter something" id="input_value" onkeypress="return runScript(event)" >
+                <button type="button" class="one" onclick="todoList()"  onmouseover="mOver(this)" onmouseout="mOut(this)" >Add Item</button>
         </div>
         <form id="list" align="center"  style="font-family:'Times New Roman', Times, serif"></form>
         </div>

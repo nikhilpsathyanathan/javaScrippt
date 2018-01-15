@@ -12,4 +12,22 @@ function todoList() {
   
    document.getElementById("list").appendChild(newItem).style.color="#FDAD2D";
    }
+   document.getElementById('input_value').value="";
   } 
+
+
+  function runScript(event) {
+    if (event.which == 13 || event.keyCode == 13) {
+       todoList();
+        return false;
+    }
+    return true;
+}
+
+function mOver(obj) {
+  obj.innerHTML = "Click to add"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Add Item"
+}
